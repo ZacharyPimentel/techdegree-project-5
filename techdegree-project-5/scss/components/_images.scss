@@ -1,0 +1,20 @@
+
+.img{
+	@include m(logo){
+		@include centered(30px);
+	}
+
+	@include m(avatar){
+		@include centered(20px);
+		@extend %image-styles;
+		@include mq(medium){
+			max-width: 60%;
+		}
+	}
+
+	@include m(frame){
+		@include centered(30px);
+		@extend %image-styles;
+		border:1px solid grey;
+	}
+}

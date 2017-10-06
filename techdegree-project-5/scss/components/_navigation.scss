@@ -1,0 +1,37 @@
+//styles the nav ul
+.nav{
+	padding-left: 0;
+
+	@include e(item){
+		@extend %nav-item;
+	}
+}
+
+//styles the links in the nav items
+.nav__item *{
+	@extend %nav-link;
+
+	&:visited,&:link{
+		color: $black;
+	}
+	&:hover{
+		background-color:$turquoise;
+		color: $white;
+	}
+}
+
+@include mq(medium){
+	.nav__item{
+		@include centered(0 10px);
+		flex-grow: 1;
+		min-width: 100px;
+		font-size: 0.8em;
+		max-height: 50px;
+
+		& *{
+			padding:10px 0;
+		}
+	}
+
+
+}

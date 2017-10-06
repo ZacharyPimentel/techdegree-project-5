@@ -1,0 +1,6 @@
+//makes the nav list into a flex container
+@include mq(medium){ 
+	.container ul{
+		display:flex;
+	}
+}

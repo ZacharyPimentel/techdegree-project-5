@@ -1,0 +1,55 @@
+.container{
+	font-family: $font-google-primary;
+}
+
+//generates some margin between the sections except for the first one
+.grid__row{
+	@include centered(70px);
+
+	&:first-of-type{
+		margin-top:0;
+	}
+	//turns grid rows into flex containers and applies clearfix
+	@include mq(medium){
+		&:after{
+			@include clearfix;
+		}
+		display:flex;
+	}
+}
+
+.card{
+	width:90%;
+	margin:0 auto;
+	font-size: 1.3em;
+}
+//headline styles
+.headline{
+	&--primary{
+		@extend %hl-prim;
+	}
+
+	&--secondary{
+		@extend %hl-sec;
+	}
+}
+
+
+.blockquote{
+	border-left:8px solid green;
+	padding-left:25px;
+	border-radius: 5px;
+	border-color:$turquoise;
+	font-style: italic;
+	font-size:1.2em;
+	margin-bottom: 70px;
+}
+
+.link{
+	@extend %link-styles;
+}
+
+//styles the column so it is centered
+.centered{
+		margin:auto;
+	}

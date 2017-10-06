@@ -1,0 +1,55 @@
+//colors
+
+$white   		: #fff;
+$black   		: #000;
+$grey    		: #797e83; 
+
+$coral   		: #FF7F50;
+$emerald 		: #50C878;
+$sunglo 	    : #E16865;
+$purple-majesty : #9678B6;
+$scooter 		: #29CAE0;
+$turquoise  	: #76D7C4;
+$jelly-bean		: #2A7DB2;
+$heliotrope		: #DA7AF5;
+
+//UI Colors
+$descrip-colors: (
+	default	: $scooter,
+	success	: $emerald,
+	error 	: $sunglo,
+	warning	: $coral,
+	info 	: $purple-majesty
+);
+
+$grid-colors: (
+	1  : red,
+	2  : blue,
+	3  : $heliotrope,
+	4  : $scooter,
+	5  : $emerald,
+	6  : $jelly-bean,
+	7  : $sunglo,
+	8  : $coral,
+	9  : green,
+	10 : yellow,
+	11 : orange,
+	12 : $turquoise
+
+);
+
+
+//grid variables
+
+$g-col-width		: 65px;
+$g-gutter-width		: 20px;
+$g-col-count		: 12;
+$g-cont-max-width	: 1050px;
+
+//breakpoints
+
+$brkpnt-min : 1px;
+$brkpnt-med : 769px;
+
+//fonts
+$font-google-primary :'Montserrat',sans-serif;

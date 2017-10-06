@@ -1,0 +1,18 @@
+.form{
+	@include centered(0);
+	width:90%;
+	align-self: flex-start;
+
+	@include e(input){
+		@include centered(0);
+		border:none;
+		border-bottom: 5px solid $turquoise;
+		width:80%;
+		padding:10px;
+	}
+	@include e(label){
+		@include m(hidden){
+			display:none;
+		}
+	}
+}

@@ -1,0 +1,64 @@
+//media query mixin
+@mixin mq($break){
+	@if $break== "medium" {
+		@media (min-width: $brkpnt-med){
+			@content;
+		}
+	}
+	@else{
+		@error "No value could be retrieved for #{$break}"; 
+	}
+}
+
+//flexbox settings
+@mixin flex($align,$justify) {
+	display:flex;
+	align-items: $align;
+	justify-content: $justify;
+}
+
+//element BEM selector mixin
+@mixin e($element){
+	&__#{$element} {
+		@content;
+	}
+}
+
+//modifier BEM selector mixin
+@mixin m($modifier){
+	&--#{$modifier} {
+		@content;
+	}
+}
+
+
+@mixin doubly($margin:1em) {
+	& + & {
+		margin-left: $margin;
+		@content;
+	}
+}
+
+//creates a class for each theme in ui-colors
+@mixin bg-colors($map){
+	@each $theme, $color in $map{
+		&--#{$theme} {
+			background-color: $color;
+			@content;
+		}
+	}
+}
+
+//turns an element into block level and centers it.
+//arguments are top/bot margin, left/right margin
+@mixin centered ($margintb,$marginlr:auto){
+	display:block;
+	margin: $margintb $marginlr;
+}
+
+//clearfix mixin
+@mixin clearfix{
+	content:"";
+	display:table;
+	clear:both;
+}

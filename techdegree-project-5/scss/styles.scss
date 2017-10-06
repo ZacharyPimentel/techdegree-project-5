@@ -1,0 +1,9 @@
+//import normalize.css 
+@import '../scss/base/normalize.css';
+
+//import index.scss files from scss folders
+
+@import 'utilities/index.scss';
+@import 'base/index.scss';
+@import 'components/index.scss';
+

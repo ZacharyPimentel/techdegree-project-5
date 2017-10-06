@@ -1,0 +1,19 @@
+
+//gives each button it's own colour and adds some basic button styles
+.btn{
+	@include bg-colors($descrip-colors){
+		@extend %btn-styles-sm;
+		width:90%;
+	}
+}
+
+//target the button classses and applies styles to buttons in 
+//larger screen sizes
+[class^="btn--"].theme__colors{
+	@extend %btn-styles-med;
+}
+
+//specific rule to make the button in the form the correct width
+.form .btn--default{
+			width:90%;
+		}
